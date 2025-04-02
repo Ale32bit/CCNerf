@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.alexdevs.dsmp.ccnerf.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "ccnerf.refmap.json",
+  "mixins": [
+    "WirelessModemPeripheralMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
