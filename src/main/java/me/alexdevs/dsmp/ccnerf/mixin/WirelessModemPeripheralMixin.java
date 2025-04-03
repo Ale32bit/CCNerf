@@ -17,11 +17,6 @@ public abstract class WirelessModemPeripheralMixin {
     @Shadow
     private boolean advanced;
 
-    @Inject(method = "isInterdimensional", at = @At("HEAD"), cancellable = true)
-    private void ccnerf$overrideIsInterdimensional(CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(false);
-    }
-
     @Redirect(
             method = "getRange",
             at = @At(
@@ -51,7 +46,7 @@ public abstract class WirelessModemPeripheralMixin {
             } else {
                 range = minRange;
             }
-            cir.setReturnValue(range);
+            cir.setReturnValue(range * 2d);
             return;
         }
         cir.setReturnValue(0.0);

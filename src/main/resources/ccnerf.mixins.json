@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "ccnerf.refmap.json",
   "mixins": [
-    "WirelessModemPeripheralMixin"
+    "WirelessModemPeripheralMixin",
+    "WirelessNetworkMixin"
   ],
   "client": [
   ],
